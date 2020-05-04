@@ -4,6 +4,7 @@ import { View, Text, StyleSheet } from "react-native";
 import { gray, blue } from "../utils/colors";
 
 const QuizResults = props => {
+
   const { correct, numberOfQuestions } = props;
   const result = (correct / numberOfQuestions) * 100;
   return (

@@ -59,7 +59,7 @@ class AddCard extends Component {
       }));
     }
 
-    if ((errorMessage === false) & (question !== " ") & (answer !== "")) {
+    if ((errorMessage === false) & (question !== "") & (answer !== "")) {
       //Update store 
       const card = { question, answer };
       console.log(card);

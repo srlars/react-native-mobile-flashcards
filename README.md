@@ -2,6 +2,10 @@
 
 This exercise is used to deepen my understanding of React Native. Animations, navigation and notifications features were implemented. Layout is build using CSS flexbox properties.
 
+## Platforms
+
+This application has been tested on both the iOS and the Android platform (see screenshots below).
+
 ## Prerequisites
 
 - [Expo installation](https://expo.io/learn)

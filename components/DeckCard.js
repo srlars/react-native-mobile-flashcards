@@ -9,6 +9,8 @@ import { blue, gray } from "../utils/colors";
 const DeckCard = props => {
   const { title, numberOfCards } = props;
 
+  //Implemented review comment but numberOfCards is still not working.
+
   return (
     <View style={styles.deckCard}>
       <Text style={styles.title}>{title}</Text>
@@ -26,7 +28,8 @@ function mapStateToProps(decks, { title }) {
 
 DeckCard.propTypes = {
   decks: PropTypes.object,
-  title: PropTypes.string
+  title: PropTypes.string,
+  numberOfCards: PropTypes.number
 };
 
 export default connect(mapStateToProps)(DeckCard);

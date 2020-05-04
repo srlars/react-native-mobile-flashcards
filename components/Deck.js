@@ -8,6 +8,8 @@ import {
 } from "react-native";
 import { connect } from "react-redux";
 
+import PropTypes from "prop-types";
+
 import AddCard from "./AddCard";
 import DeckCard from "./DeckCard";
 
@@ -42,7 +44,7 @@ class Deck extends Component {
   }
 
   render() {
-    const { navigation, route } = this.props;
+    const { navigation, route, numberOfCards } = this.props;
     const { modalVisible } = this.state;
 
     const { title } = route.params;
@@ -50,7 +52,7 @@ class Deck extends Component {
     return (
       <View style={{ flex: 1 }}>
         <View style={styles.container}>
-          <DeckCard title={title} />
+          <DeckCard title={title} numberOfCards={numberOfCards} />
           <Modal
             animationType="slide"
             transparent={false}
@@ -90,6 +92,10 @@ class Deck extends Component {
     );
   }
 }
+
+Deck.propTypes = {
+  numberOfCards: PropTypes.number
+};
 
 export default connect()(Deck);
 

@@ -12,6 +12,11 @@ import PropTypes from "prop-types";
 import DeckCard from "./DeckCard";
 import QuizResults from "./QuizResults";
 
+import {
+  clearLocalNotification,
+  setLocalNotification
+} from '../utils/helpers';
+
 import { blue, white } from "../utils/colors";
 
 import { Ionicons } from "@expo/vector-icons";
@@ -101,7 +106,12 @@ class Quiz extends Component {
     //Check answer btn
     const checkAnswer = (
       <TouchableOpacity onPress={() => this.showResponseHandler()}>
-        <Text style={styles.checkFormat}>Check answer</Text>
+        <Text style={styles.checkFormat}>
+          {this.state.showAnswer === true
+            ? "Check question"
+            : "Check answer"
+          }
+        </Text>
       </TouchableOpacity>
     );
 
@@ -125,7 +135,11 @@ class Quiz extends Component {
     //Back btn
     const backBtn = (
       <TouchableOpacity
-        onPress={() => navigation.goBack()}
+        onPress={() => {
+          navigation.goBack()
+          clearLocalNotification()
+            .then(setLocalNotification)
+        }}
         style={styles.goBackBtn}
       >
         <Text style={styles.goBack}>Exit</Text>
