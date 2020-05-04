@@ -53,13 +53,15 @@ class Quiz extends Component {
       this.setState(prevState => ({
         ...prevState,
         index: prevState.index + 1,
-        correct: prevState.correct + 1
+        correct: prevState.correct + 1,
+        showAnswer: false
       }));
     } else {
       this.setState(prevState => ({
         ...prevState,
         showQueryResults: true,
-        correct: prevState.correct + 1
+        correct: prevState.correct + 1,
+        showAnswer: false
       }));
     }
   }
@@ -71,12 +73,14 @@ class Quiz extends Component {
     if (index + 1 < numberOfQuestions) {
       this.setState(prevState => ({
         ...prevState,
-        index: prevState.index + 1
+        index: prevState.index + 1,
+        showAnswer: false
       }));
     } else {
       this.setState(prevState => ({
         ...prevState,
-        showQueryResults: true
+        showQueryResults: true,
+        showAnswer: false
       }));
     }
   }

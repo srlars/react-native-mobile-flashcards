@@ -22,7 +22,7 @@ const DeckCard = props => {
 
 function mapStateToProps(decks, { title }) {
   return {
-    numberOfCards: decks[title] ? decks[title].length : 0
+    numberOfCards: decks[title] ? decks[title].questions.length : 0
   };
 }
 
