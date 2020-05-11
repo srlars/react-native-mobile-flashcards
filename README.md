@@ -34,3 +34,4 @@ To run this project follow these steps:
 ![Image 4](https://github.com/srlars/react-native-mobile-flashcards/blob/master/screenshots/screenshot_4.png)
 ![Image 5](https://github.com/srlars/react-native-mobile-flashcards/blob/master/screenshots/screenshot_5.png)
 ![Image 6](https://github.com/srlars/react-native-mobile-flashcards/blob/master/screenshots/screenshot_6.png)
+![Image 7](https://github.com/srlars/react-native-mobile-flashcards/blob/master/screenshots/screenshot_7.png)
