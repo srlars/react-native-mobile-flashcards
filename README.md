@@ -1,4 +1,4 @@
-# React Native Fitness Tracker
+# React Native Mobile Flashcards
 
 This exercise is used to deepen my understanding of React Native. Animations, navigation and notifications features were implemented. Layout is build using CSS flexbox properties.
 
